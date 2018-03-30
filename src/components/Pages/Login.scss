@@ -1,0 +1,61 @@
+@import './../Shared/variables.scss';
+@import './../Shared/typography.scss';
+
+.main {
+  background: color(dark);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: url('https://image.flaticon.com/icons/svg/762/762048.svg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100px;
+    height: 100px;
+    opacity: .1;
+  }
+
+  &::after {
+    content: url('https://image.flaticon.com/icons/svg/762/762048.svg');
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    z-index: 10;
+    width: 100px;
+    height: 100px;
+    opacity: .1;
+  }
+
+  &__container {
+
+    &__title {
+      color: color(white);
+      font-size: 40px;
+      text-shadow: 0 2px 1px darken(color(dark), 10);
+    }
+
+    &__form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 32px;
+    
+      &__button {
+        padding: 8px 14px;
+        border: 0;
+        border-radius: 5px;
+        background: color(principal-color);
+        color: color(white);
+        text-align: center;
+        font-family: $font-text;
+        font-size: 18px;
+        width: 70%;
+        text-shadow: 1px 1px 1px color(dark);
+      }
+    }
+  }
+}

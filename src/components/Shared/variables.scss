@@ -1,0 +1,25 @@
+$max-width: 1024px;
+
+$small: 320px;
+$medium: 640px;
+$large: 1024px;
+
+$colors: (
+  body-bg: #fcfcfc,
+  font-color: #44545E,
+  dark: #282d31,
+  white: #fff,
+  border-color: #dfe0e0,
+  principal-color: #007BDF,
+  secondary-color: #00CBFF,
+  third-color:#FF3C32
+);
+
+@function color($color) {
+  @if map-has-key($map: $colors, $key: $color) {
+    @return map-get($map: $colors, $key: $color)
+  }
+
+  @warn "Unknown `#{$color}` in $colors.";
+  @return null;
+}

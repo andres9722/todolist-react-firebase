@@ -1,0 +1,38 @@
+@import './../Shared/variables.scss';
+@import './../Shared/typography.scss';
+
+.todo__form {
+  display: grid;
+  grid-template-columns: 65% 35%;
+
+  .todo__input {
+    width: 100%;
+    border: none;
+    border-top: 2px solid rgba(color(principal-color), 1);
+    border-bottom: 2px solid rgba(color(principal-color), 1);
+    padding: 5px;
+    line-height: 16px;
+    color: color(font-color);
+    font-family: $font-text;
+    align-self: center;
+
+    &:focus {
+      outline: none;
+      border: none;
+      border-top: 2px solid rgba(color(dark), .7);
+      border-bottom: 2px solid rgba(color(dark), .7);
+    }
+  }
+
+  .todo__button {
+    outline: none;
+    box-shadow: none;
+    border-radius: 3px;
+    padding: 8px;
+    color: color(white);
+    font-family: $font-text;
+    border: 2px solid #006DC6;
+    background: rgba(color(principal-color), .8);
+    align-self: center;
+  }
+}

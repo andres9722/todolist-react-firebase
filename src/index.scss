@@ -1,0 +1,24 @@
+@import './components/Shared/typography.scss';
+@import './components/Shared/variables.scss';
+@import './components/Shared/mixins.scss';
+@import './components/Shared/base.scss';
+
+.menu__item {
+
+  .menu__logout {
+    outline: none;
+    box-shadow: none;
+    border-radius: 3px;
+    border: 2px solid color(third-color);
+    background:  rgba(color(third-color), .8);
+    padding: 8px;
+    color: color(white);
+    width: 25%;
+    position: fixed;
+    right: 8px;
+    bottom: 0;
+    margin: 8px auto;
+    text-align: center;
+    z-index: 5;
+  }
+}

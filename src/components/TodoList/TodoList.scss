@@ -1,0 +1,59 @@
+@import './../Shared/variables.scss';
+@import './../Shared/typography.scss';
+
+.todo {
+  width: 95%;
+  min-height: auto;
+  margin: 8px auto;
+  padding: 16px;
+  text-align: center;
+  border-radius: 3px;
+
+  &__title {
+    font-size: 36px;
+    text-shadow: 0 1px 1px color(principal-color);
+  }
+
+  &__user {
+    margin-bottom: 16px;
+    display: grid;
+    grid-template-columns: 80% 20%;
+
+    &-name {
+      font-size: 13px;
+      align-self: center;
+      justify-self: left;
+    }
+
+    &-photo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      justify-self: right;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    .todo__item--active {
+      animation: order 1s both;
+
+      @keyframes order {
+        from {
+          order: 0;
+        }
+
+        to {
+          order: 1;
+        }
+      }
+    }
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100vh;
+}
