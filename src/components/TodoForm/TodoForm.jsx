@@ -33,7 +33,7 @@ export default class TodoForm extends Component {
     return (
       <div className='todo__form'>
         <input type='text' value={this.state.value} className='todo__input' placeholder='Agregar tarea' maxLength='28' onChange={this.handleOnChange} autoFocus />
-        <button className='todo__button' onClick={() => this.handleOnAdd(this.state.value)} > Guardar </button>
+        <button className='todo__button' onClick={() => this.handleOnAdd(this.state.value)} > Agregar </button>
       </div>
     )
   }

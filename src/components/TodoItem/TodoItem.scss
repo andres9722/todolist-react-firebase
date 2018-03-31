@@ -6,6 +6,7 @@
   text-align: left;
   margin-bottom: 10px;
   padding-bottom: 10px;
+  cursor: pointer;
 
   &--active {
     padding: 5px;
@@ -24,6 +25,7 @@
     color: color(white);
     font-family: $font-text;
     box-shadow: 0 2px 2px color(border-color);
+    cursor: pointer;
   }
 }
 

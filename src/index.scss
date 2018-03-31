@@ -3,6 +3,10 @@
 @import './components/Shared/mixins.scss';
 @import './components/Shared/base.scss';
 
+html {
+  overflow: hidden;
+}
+
 .menu__item {
 
   .menu__logout {

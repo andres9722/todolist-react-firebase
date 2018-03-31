@@ -3,7 +3,7 @@ import { Route, BrowserRouter as Router, Link, Redirect, Switch } from 'react-ro
 
 import firebase from 'firebase'
 import { init } from './config/config.jsx'
-import { googleSignOut } from './config/Auth.jsx'
+import { googleSignOut, pwa, isOnLine } from './config/Auth.jsx'
 
 import Error404 from './components/Pages/Error404.jsx'
 import DashboardTodo from './components/Pages/Protected/Dashboard.jsx'
@@ -47,6 +47,7 @@ export default class App extends Component {
     init()
     this.removeListener = firebase.auth().onAuthStateChanged(user => {
       if (user) {
+        pwa()
         this.setState({
           authed: true,
           loading: false
@@ -56,6 +57,7 @@ export default class App extends Component {
           loading: false
         })
       }
+      isOnLine()
     })
   }
 
@@ -85,7 +87,7 @@ export default class App extends Component {
           }
           <main className='principal'>
             <Switch>
-              <PublicRoute authed={this.state.authed} exact path='/' component={Login} />
+              <PublicRoute authed={this.state.authed} path='/' exact component={Login} />
               <PrivateRoute authed={this.state.authed} path='/home' component={DashboardTodo} />
               <Route component={Error404} />
             </Switch>

@@ -64,7 +64,7 @@ export default class TodoList extends Component {
   render () {
     return (
       <div className='todo'>
-        <h1 className='todo__title'>TODO LIST</h1>
+        <h1 className='todo__title'>LISTA DE TAREAS</h1>
         <div className='todo__user'>
           <p className='todo__user-name' >{this.user.displayName}</p>
           <img className='todo__user-photo' src={this.user.photoURL} alt='Foto de perfil' />
